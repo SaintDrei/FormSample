@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'DataEntryController@index');
+Route::post('submit', 'DataEntryController@submit');

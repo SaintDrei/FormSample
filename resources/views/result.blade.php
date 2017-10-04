@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <html>
 <head>
     <!--Import Google Icon Font-->
@@ -7,6 +12,21 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <?php
+
+
+    echo "
+    <script>
+    $(document).ready(function(){
+        Materialize.Toast('Welcome $fullname!', 5000);
+
+
+    });
+
+    </script>
+
+
+        "; ?>
 </head>
 
 <body>
@@ -25,43 +45,31 @@
 </div>
 
 <div class="container">
+    <div class="row">
+        <div class="col l8 push-l2">
 
-    <div class="card col push-l1 push-m1 l8 m8 s12">
-        <div class="row">
-
-            <form class="col push-l1 push-m1 l10 m10 s12">
-                <h2>Data Entry Form</h2>
+            <div class="card col">
+                <h2>Results</h2>
                 <div class="row">
-                    <div class="input-field ">
-
-                        <input placeholder="Placeholder" id="first_name" name="first_name" type="text" class="validate">
-                        <label for="first_name">First Name</label>
-
+                    <div class="col l5">
+                        <b>Full Name:</b>
+                    </div>
+                    <div class="col l7">
+                        <b>{{$fullname}}</b>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field">
-
-                        <input placeholder="Placeholder" id="last_name" name="last_name" type="text" class="validate">
-                        <label for="last_name">Last Name</label>
-
+                    <div class="col l5 s10 m10 push-l1-s1">
+                        <b>Age:</b>
+                    </div>
+                    <div class="col l7">
+                        <b>{{$age}}</b>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="input-field">
-
-                        <input placeholder="Placeholder" id="birthyear" name="birthyear" type="number" class="validate">
-                        <label for="birthyear">Year of Birth</label>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <button class="btn cyan waves-effect waves-light right" style="margin-right:2em;" type="submit" onclick="Materialize.toast('Submitted!', 4000)" name="login">Submit!</button>
-                </div>
-            </form>
-
+            </div>
         </div>
     </div>
+
 </div>
 
 <div class="fixed-action-btn click-to-toggle" style="bottom: 45px; right: 24px;">
